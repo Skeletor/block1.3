@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "TTLakes";
+    src: url('../fonts/TTLakes-Black.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: "TTLakes-Regular";
+    src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: "TTLakes-Medium";
+    src: url('../fonts/TTLakes-Medium.ttf') format('truetype');
+    src: url('../fonts/TTLakes-Medium.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    background-color: #F8F8F8;
+}
+
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 88px;
+    background-color: white;
+}
+
+.blank-space {
+    width: 200px;
+}
+
+.title {
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+}
+
+.title__text {
+    font-family: "TTLakes-Medium";
+    margin-left: 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.menu {
+    font-family: "TTLakes-Regular";
+    font-size: 1.25rem;
+}
+
+.menu__items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    list-style: none;
+    padding-left: 16px;
+    margin: 0;
+}
+
+.menu__item {
+    color: #7E7E82;
+    padding: 10px;
+    width: auto;
+    height: 40px;
+    white-space: nowrap;
+    line-height: 40px;
+}
+
+
+
+.info__picture {
+    margin: 10px 0px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__text {
+    font-family: "TTLakes-Regular";
+    font-size: 1rem;
+    margin: 16px;
+}
+
+.info__expand {
+    display: flex;
+    font-family: "TTLakes-Medium";
+    margin-left: 16px;
+}
+
+.header__item {
+    display: inherit;
+}
+
+.header__item:not(.header__divider):hover {
+    border-bottom: 2px solid red;
+}
+
+.menu__item:hover {
+    background-color: white;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+@media (max-width:767px)
+{
+    .visual-break {
+        display: none;
+    }
+
+    .header-medium {
+        display: none;
+    }
+
+    .header-large {
+        display: none;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .info {
+        flex-direction: row;
+        margin: 15px;
+    }
+
+    .info-medium-size {
+        display: block;
+        padding: 0;
+    }
+
+    .info__text::after {
+        content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
+    }
+
+    .visual-break {
+        display: block;
+    }
+
+    .info__picture {
+        width: 360px;
+        height: 208px;
+        border-radius: 15px;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .header-medium {
+        display: flex;
+    }
+
+    .header-large {
+        display: none;
+    }
+}
+
+@media (min-width: 1120px)
+{
+    body {
+        max-width: 1120px;
+        margin: auto;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .header-medium {
+        display: none;
+    }
+
+    .header-large {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-family: "TTLakes-Medium";
+    }
+
+    .info__picture {
+        width: 531px;
+        height: 307px;
+        border-radius: 20px;
+    }
+
+    .info__text::after {
+        content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.";
+    }
+
+    .menu__items {
+        flex-wrap: wrap;
+        overflow: none;
+    }   
+
+    .header-large__application-text {
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .header-large__repair-icon {
+        margin-right: 25px;
+    }
+
+    .header-large__status-text {
+        margin-right: 10px;
+    }
+}
